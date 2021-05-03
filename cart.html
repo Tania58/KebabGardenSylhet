@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="e">
 <head>
-    <title>WELCOME TO KEBAB GARDEN RESTAURANT</title>
+    <title>WELCOME TO SHOPPING CART</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <!-----------------------Fevicon image------>
+          <link rel="shortcut icon" type="image/jpg" href="IMAGE/favicon.jpg"/>
 
         <!-- Bootstrap FontAwesome link start here-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,8 +19,8 @@
         <script type="text/javascript" src="JS/jquery-3.4.1.min.js"> </script>
 
         <!---------------My CSS link---------------------->
-        <link rel="stylesheet" href="CSS/mainstyle.css">
-    <link rel="stylesheet" href="CSS/style1.css">
+        
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <!------------->
 
@@ -27,9 +29,9 @@
 
    <!---------------Navbar start from bootstrap-->
 <nav class="my-nav navbar navbar-expand-lg ">
-    <a class="navbar-brand" href="#">
-      <img class="logo-rounded h-48" alt="Logo" src="IMAGE/logo.gif">Home
-    </a>
+  <a class="navbar-brand text-white" href="/index.html">
+    <img class="logo-rounded h-48" alt="Logo" src="IMAGE/logo.png" loading="lazy">Home
+  </a>
       <button class=" bg-primary navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -66,8 +68,8 @@
           <a class="nav-link" href="#">Contact Us</a>
         </li>
     
-         <li class="nav-item">
-          <ion-icon name="basket-outline"></ion-icon><span>Cart</span>
+        <li class=" cart nav-item nav-link">
+          <i class="cart fa fa-shopping-basket "></i>&nbsp;<text><a href="cart.html"> Cart</a></text>&nbsp;<span>0</span>
          </li>
       </ul>
     </div>
@@ -77,13 +79,23 @@
 
 
 <!---------Slider start ----->
-<div id="product">
+<div class="product-container ">
+  <div class="product-header">
+    
+    <h5 class="product-title">Product</h5>
+    <h5 class="price">Price</h5>
+    <h5 class="quantity">Quantyti</h5>
+    <h5 class="total">Total</h5>
+    
+
+  </div>
+  <div class="products"></div>
     
 </div>
 
 
 
-<!--------------Social media--------------
+------------Social media--------------
 <section id="social-media">
     <div class="container-fluid">
             <div class="col-12 col-sm-3 col-md-10 col-lg-12 m-auto" id="social-icon">
@@ -101,7 +113,7 @@
 </section>
 
 
-<!-----------Footer start here------------------
+<!-- ---------Footer start here------------------>
 <footer id="footer">
 <div class="container-fluid" id="my-footer">
 <div class="row" id="footer-wrap">
@@ -145,7 +157,7 @@
 </footer>
 
 
-<!-----------Footer End here------------------>
+<!--------Footer End here----------------
 
 
 

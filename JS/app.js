@@ -127,6 +127,7 @@ function onLoadCartNumbers(){
 }
 
 function cartNumbers(product){
+    //console.log('the product clicked is',product)
     let productNumbers=localStorage.getItem('cartNumbers');
 
     productNumbers=parseInt(productNumbers);
@@ -146,14 +147,23 @@ function cartNumbers(product){
 
 
 function setItems(product){
+
     let cartItems=localStorage.getItem('productsInCart');
+    //console.log('my cart item is',cartItems);
     cartItems=JSON.parse(cartItems);
 
-    if(cartItems!= null){
+    if(cartItems != null){
         console.log(cartItems[product.tag]);
 
-        //cartItems['gray shirt']
-        cartItems[product.tag].inCart+=1;
+        if(cartItems[product.tag] == undefined){
+            cartItems={
+                ...cartItems,
+                [product.tag]:product
+            }
+        }
+
+        //cartItems['gray shirt'] first product incart number
+        cartItems[product.tag].inCart += 1;
 
     }
     else{
@@ -175,7 +185,7 @@ function setItems(product){
 }
 // total cost dosnt showing
 function totalCost(product){
-   // console.log("The product price is",product.price);
+   //console.log("The product price is",product.price);
     let cartCost=localStorage.getItem('totalCost');
    
     console.log("My CartCost is ",cartCost);
@@ -186,25 +196,37 @@ function totalCost(product){
         localStorage.setItem('totalCost',cartCost + product.price);
     }
     else{
-        localStorage.setItem('totalCost',product.price)
+       localStorage.setItem('totalCost',product.price); 
     }
+   
 }
 
 function displayCart(){
     let cartItems=localStorage.getItem('productInCart');
     cartItems=JSON.parse(cartItems);
     let productContainer=document.querySelector('.products');
+    let cartCost=localStorage.getItem('totalCost');
+    
     console.log(cartItems);
+    //console.log('running');
 
     if(cartItems && productContainer){
         productContainer.innerHTML='';
-        Object.values(cartItems).map(item=>{
-            productContainer.innerHTML+=`<div class="product"><ion-ion name="close-circle"></ion-ion>
-            <img src="./image/$()item.tag).jpg">
-            <span>$(item.name)</span>
+        Object.values(cartItems).map(item => {
+            productContainer.innerHTML += `<div class="product"><ion-ion name="close-circle"></ion-ion>
+            <img src="./image/${item.tag}.jpg">
+            <span>${item.name}</span>
             </div>
-            <div class="quantity"</div>`
-        });
+            <div class="price">$${item.price}00S</div>
+            <div class="quantity">
+            <ion-icon class="decrease" name="arrow-dropleft-circle"></ion-icon><span>${item.inCart}</span>
+            <ion-icon class="decrease" name="arrow-droprightt-circle"></ion-icon></div><div class="total">
+             $${item.inCart * item.price}00</div>
+             `;
+        });//increase decease item quantity code
+
+        productContainer.innerHTML += `<div class="basketTotalContainer"><h4 class="basketTotalTitle">Basket Total</h4>
+        <h4 class="BasketTotal">$${cartCost}00</h4></div>`
     }
 }
 
