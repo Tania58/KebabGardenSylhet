@@ -213,11 +213,11 @@ function displayCart(){
     if(cartItems && productContainer){
         productContainer.innerHTML='';
         Object.values(cartItems).map(item => {
-            productContainer.innerHTML += `<div class="product"><ion-ion name="close-circle"></ion-ion>
+            productContainer.innerHTML += `<div class="products"><ion-ion name="close-circle"></ion-ion>
             <img src="./image/${item.tag}.jpg">
             <span>${item.name}</span>
             </div>
-            <div class="price">$${item.price}00S</div>
+            <div class="price">$${item.price}00</div>
             <div class="quantity">
             <ion-icon class="decrease" name="arrow-dropleft-circle"></ion-icon><span>${item.inCart}</span>
             <ion-icon class="decrease" name="arrow-droprightt-circle"></ion-icon></div><div class="total">
@@ -226,8 +226,9 @@ function displayCart(){
         });//increase decease item quantity code
 
         productContainer.innerHTML += `<div class="basketTotalContainer"><h4 class="basketTotalTitle">Basket Total</h4>
-        <h4 class="BasketTotal">$${cartCost}00</h4></div>`
+        <h4 class="basketTotal">$${cartCost}00</h4></div>`
     }
+
 }
 
 onLoadCartNumbers();
