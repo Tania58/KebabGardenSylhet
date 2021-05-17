@@ -63,6 +63,7 @@ html,body{
   .navbar-toggler-icon {
     width: 0.5em;
     
+    
   }
 
   #micon .navbar-nav .nav-item .nav-link:hover {
@@ -485,11 +486,12 @@ font-size: 4vw;
 }
 }
 
-@media only screen and (max-width: 387px){
-    .navbar-toggler-icon {
+@media only screen and (max-width: 360px){
+    .navbar-toggler {
+        position: absolute;
         width: 0.5em;
-        display: inline;
-        height: auto;
+        padding: 0.25rem 1.5rem;
+        right: 12px;
 }
 }
 /*----------------------Responsive design start-------------*/
