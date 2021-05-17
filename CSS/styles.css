@@ -331,11 +331,6 @@ a.nav-link:hover{
 
 /*---------------------CART PAGE START------------------------*/
 
-
-
-
-
-
 .show-cart li {
     display: flex;
   }
@@ -347,6 +342,10 @@ a.nav-link:hover{
     height: 200px;
     align-self: center;
   }
+  /* ---Responsive Cart----*/
+  
+  
+
 
   /*---------------------CART PAGE END------------------------*/
 /*---------------Social media start-----------------------*/
