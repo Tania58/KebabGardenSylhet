@@ -484,6 +484,14 @@ font-size: 4vw;
     font-size: 14px;
 }
 }
+
+@media only screen and (max-width: 387px){
+    .navbar-toggler-icon {
+        width: 0.5em;
+        display: inline;
+        height: auto;
+}
+}
 /*----------------------Responsive design start-------------*/
 
 
