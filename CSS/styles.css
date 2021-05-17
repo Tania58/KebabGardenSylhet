@@ -346,6 +346,13 @@ a.nav-link:hover{
     height: 200px;
     align-self: center;
   }
+
+  .form-control{
+    
+    width: 100%;
+    padding: 0.375rem 0.50rem;
+    
+  }
   /* ---Responsive Cart----*/
   
   
