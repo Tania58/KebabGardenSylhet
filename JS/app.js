@@ -15,10 +15,10 @@ $("#sizzlingTawaDishLink").click(function () {
     $(".PopupClass").hide("slow");
     $("#sizzlingTawaDishPopup").show("slow");
 });
-$("#SouthLink").click(function () {
+$("#kidsCornerLink").click(function () {
     $(".MenuBlock").hide();
     $(".PopupClass").hide("slow");
-    $("#SouthPopup").show("slow");
+    $("#kidsCornerPopup").show("slow");
 });
 $("#BaltiLink").click(function () {
     $(".MenuBlock").hide();
