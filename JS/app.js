@@ -10,10 +10,10 @@ $("#tandooriKaKhajanaLink").click(function () {
     $(".PopupClass").hide("slow");
     $("#tandooriKaKhajanaPopup").show("slow");
 });
-$("#ClassicLink").click(function () {
+$("#sizzlingTawaDishLink").click(function () {
     $(".MenuBlock").hide();
     $(".PopupClass").hide("slow");
-    $("#ClassicPopup").show("slow");
+    $("#sizzlingTawaDishPopup").show("slow");
 });
 $("#SouthLink").click(function () {
     $(".MenuBlock").hide();
