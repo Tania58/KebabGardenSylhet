@@ -4,6 +4,12 @@
     <title>WELCOME TO KEBAB GARDEN RESTAURANT</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="kebab Garden Sylhet">
+        <meta name="keywords" content="Kebab Garden, Tawa Dish, Pizza, Chiken Tikka Biriyani, Pizza Garden, Best Pizza,Snacks,lassi">
+        <meta name="author" content="Syed Hasan">
+        <!-----------------------Fevicon image------>
+        <link rel="shortcut icon" type="image/jpg" href="IMAGE/favicon.jpg"/>
+
 
         <!-- Bootstrap FontAwesome link start here-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,8 +23,10 @@
         <script type="text/javascript" src="JS/jquery-3.4.1.min.js"> </script>
 
         <!---------------My CSS link---------------------->
-        <link rel="stylesheet" href="CSS/mainstyle.css">
-    <link rel="stylesheet" href="CSS/style1.css">
+            <link rel="stylesheet" href="CSS/styles.css">
+        
+        <!---------------------About us style here-------->
+      
 </head>
 <!------------->
 
@@ -26,28 +34,35 @@
 
 
    <!---------------Navbar start from bootstrap-->
-<nav class="my-nav navbar navbar-expand-lg ">
-    <a class="navbar-brand" href="#">
-      <img class="logo-rounded h-48" alt="Logo" src="IMAGE/logo.gif">Home
+<nav class="my-nav navbar navbar-expand-lg sticky " data-spy="affix" data-offset-top="197">
+    <a class="navbar-brand text-white" href="#">
+      <img class="logo-rounded h-48" alt="Logo" src="IMAGE/logo.png" loading="lazy">Home
     </a>
-      <button class=" bg-primary navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="bg-primary navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Order Online <span class="sr-only">(current)</span></a>
+          <!--Add to cart and clear cart div start-->
+          <div class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+            <div class="row">
+                <div class="col">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button>
+                  <button class="clear-cart btn btn-danger">Clear Cart</button></div>
+            </div>
+          </div>
+          <!--Add to cart and clear cart div start-->
+          <!-- <a class="nav-link" href="#">Order Online <span class="sr-only">(current)</span></a> -->
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown link
+              MENU
             </a>
             <div class="mydropdown-menu dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#KBMains">KEBAB GARDEN MAINS</a>
-                <a class="dropdown-item" href="">KEBAB GARDEN MAINS</a>
-                <a class="dropdown-item" href="#">TANDORI KA KHAJANA</a>
+                <a class="dropdown-item" href="#kebabGardenMainsLink">KEBAB GARDEN MAINS</a>
+                <a class="dropdown-item" href="#">TANDOORI KA KHAJANA</a>
                 <a class="dropdown-item" href="#">SIZZLING TAWA DISH SPECIAL</a>
-                <a class="dropdown-item" href="#">KIDS CORNER</a>
                 <a class="dropdown-item" href="#">BIRIYANI CORNER</a>
                 <a class="dropdown-item" href="#">KEBAB GARDEN EXTRAS</a>
                 <a class="dropdown-item" href="#">SNACKS & WRAPS</a>
@@ -55,202 +70,141 @@
                 <a class="dropdown-item" href="#">CALZONE PIZZA</a>
                 <a class="dropdown-item" href="#">TURKISH PIDE PIZZA</a>
                 <a class="dropdown-item" href="#">GARLIC BREAD PIZZA</a>
-                <a class="dropdown-item" href="#">DRINKS & DESSERT</a>
+                <a class="dropdown-item" href="#">KIDS CORNER</a>
+                <a class="dropdown-item" href="#">DRINKS CORNAER</a>
             </div>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="about.html">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="contact.html">Contact Us</a>
         </li>
-    
-         <li class="nav-item">
-          <ion-icon name="basket-outline"></ion-icon><span>Cart</span>
+        <li class="nav-item">
+            <button class="nav-link" style="color: white;" onclick="darkMood()">Dark Mood</button>
          </li>
+    
+         <!-- <li class=" cart nav-item nav-link">
+          <i class="cart fa fa-shopping-basket "></i>&nbsp;<text><a href="cart.html"> Cart</a></text>&nbsp;<span>0</span>
+         </li> -->
       </ul>
     </div>
   </nav>
 
    <!---------------Navbar end from bootstrap-->
-
-
-<!---------Slider start ----->
-<section id="banner-slider">
-    <div class="container ">
-    <!---------------------------------Carousel Wrapper------------------>
-    <div id="carousel-example-2" class="my-carousel carousel slide carousel-fade" data-ride="carousel">
-    <!---------------------------Indicators--------------------------------->
-       <ol class="carousel-indicators">
-        <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-2" data-slide-to="1"></li>
-        <li data-target="#carousel-example-2" data-slide-to="2"></li>
-        <li data-target="#carousel-example-2" data-slide-to="3"></li>
-        <li data-target="#carousel-example-2" data-slide-to="4"></li>
-    </ol>
-    <!-----------------------End of Indicators---------------------------->
-    <!----------------------Star Slides-------------------------------------->
-    <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-            <div class="view">
-                <img class="d-block img img-responsive w-100" src="IMAGE/mainLook.png"
-                    alt="KB Outside">
-                <div class="mask rgba-black-light"></div>
-            </div>
-            <div class="carousel-caption">
-                <h2 class="h2-responsive text-dark-50">Kebab Garden</h2>
-                <p>Al-Amin Complex, Zindabazar</p>
-            </div>
+   <!---------------------Main content start-------------->
+   <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <div class="carousel-item">
-            <!--Mask color-->
-            <div class="view">
-                <img class="d-block img img-responsive w-100" src="IMAGE/kb-inside.JPG"
-                    alt="KB Inside">
-                <div class="mask rgba-black-strong"></div>
-            </div>
-            <div class="carousel-caption">
-                <h2 class="h2-responsive text-dark-50">Kebab Garden Inside</h2>
-                 <p>inside our Restuarant view </p>
-            </div>
+        <div class="modal-body">
+          <table class="show-cart table">
+            
+          </table>
+          <div>Total price: BDT<span class="total-cart"></span></div>
         </div>
-        <div class="carousel-item">
-            <!--Mask color-->
-            <div class="view">
-                <img class="d-block w-100 img img-responsive" src="IMAGE/kb-outside.JPG"
-                    alt="Tawa Dish">
-                <div class="mask rgba-black-slight"></div>
-            </div>
-            <div class="carousel-caption">
-                <h2 class="h2-responsive text-dark-50 ">Sizzling Tawa Dish Special</h2>
-                <p>Sizzling Tawa Dish for 2/3/4/6/10 Person</p>
-            </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Back to Menu</button>
+          <button type="button" class="btn btn-primary"><a href="order.html" style="color:darkred;">Order now </a></button>
         </div>
-        <div class="carousel-item">
-            <!--Mask color-->
-            <div class="view">
-                <img class="d-block img img-responsive w-100" src="IMAGE/chik-biriany.jpg"
-                    alt="Beef Chiken Doner">
-                <div class="mask rgba-black-strong"></div>
-            </div>
-            <div class="carousel-caption">
-                <h2 class="h2-responsive text-dark-50">Beef Chiken Doner Kebab</h2>
-                 <p>Served with butter nan,potato brav,salad and sauce </p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <!--Mask color-->
-            <div class="view">
-                <img class="d-block img img-responsive w-100 h-100" src="IMAGE/pizza"
-                    alt="Pizza">
-                <div class="mask rgba-black-strong"></div>
-            </div>
-            <div class="carousel-caption">
-                <h2 class="h2-responsive text-dark-50">Chiken Doner Kebab</h2>
-                 <p>Served with butter nan,potato brav,salad and sauce </p>
-            </div>
-        </div>
+      </div>
     </div>
-    <!-----------------End Slides---------------------------------------------->
-    <!---------------Star Controls----------------------------->
-    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-    <!-------------------End Controls------------------------------------>
-  </div>
-   <!-----------------------------End Carousel Wrapper------------------------->
-    </div>
+  </div> 
 
-</section>
+   
+  <!-------------------------Main Contant end----------------->
 
-            <!-----------------------Slider banner end here----------------->
 
-<!---------Slider end ----->
+
 
 
 
 <!--------------Social media-------------->
 <section id="social-media">
-    <div class="container-fluid">
-            <div class="col-12 col-sm-3 col-md-10 col-lg-12 m-auto" id="social-icon">
-                    <h2>Follow Us On Social Media</h2>
-                    <hr class="light-100">
-                    <a class="hoverable" href="https://www.facebook.com/kebabgarden/" alt="Facebook"><i class="fa fa-facebook bg-primary center" aria-hidden="true"></i></a>
-                    <a href="https://twitter.com/GardenKebab" alt="twiter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-
-                    <a href="https://www.instagram.com/p/BzNxP_PH7ML/…" alt="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="https://www.youtube.com/channel/UCfgSRYKubVYQa59ppL7UEWA?view_as=subscriber" alt="youtube"><i class="fa fa-youtube" area-hidden="true"></i></a>
-            </div>
-
-
-    </div>
-</section>
-
-
-<!-----------Footer start here------------------>
-<footer id="footer">
-<div class="container-fluid" id="my-footer">
-<div class="row" id="footer-wrap">
-  <div class="contactUs col-sm-3 col-md-4">
-    <img class="logo2" src="IMAGE/logo.gif">
-    
-    <hr class="light">
-      <h5>Visit Us</h5>
-    <hr class="light">
-    <p>+880 1666 008 874</p>
-    <p>Al-Amin Complex(2nd Floor)</p>
-    <p>Zindabazar, Shylet-3100</p>
-    <p>kebabgardenbd@gmail.com</p>
-    <p>(Oposite of Bangladesh
-        Muktizuddah)</p>
+    <div class="container-fluid  ">
+      <div class="row d-inline-block socialIcon ">
+        <div class=" col-sm-3 col-md-4 m-auto d-inline " id="social-icon" >
+          <h2>Follow Us On Social Media</h2>
+          <hr class="light-100">
+          <a class="hoverable" href="https://www.facebook.com/kebabgarden/" alt="Facebook"><i class="fa fa-facebook bg-primary center" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/GardenKebab" alt="twiter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  
+          <a class="hoverable" href="https://www.instagram.com/p/BzNxP_PH7ML/…" alt="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a class="hoverable" href="https://www.youtube.com/channel/UCfgSRYKubVYQa59ppL7UEWA?view_as=subscriber" alt="youtube"><i class="fa fa-youtube" area-hidden="true"></i></a>
+        </div>
+        <hr class="light-100">
+      </div>
   </div>
-<div class="col-sm-3 col-md-4">
-<hr class="light">
-<h5><a herf="footer.html#serviceArea"></a> Service Area</h5>
-<hr class="light">
-<p><a href="footer.html#rewardCard"></a>Reward Card</p>
-<p><a href="footer.html#chooseUs"></a>Why Choose Us </p>
-</div>
-<div class="col-sm-3 col-md-4">
-    <hr class="light">
-    <h5><a href="footer.html#outPolicies"></a> Our Policies</h5>
-    <hr class="light">
-    <p><a href="footer.html#privacyPolicy"></a>Privacy Policy</p>
-    <p><a href="footer.html#termsConditions"></a>Terms & Conditions</p>
-    <p><a href="footer.html#coolie"></a>Cookie Policy</p>
-</div>
-<div class="col-12" id="copyright">
-<hr class="light-100">
-<p>Copyright &#169; Kebab Garden , All Rights Reserved.<p>
-<p>Design By Tania Hasan</p>
-</div>
-
-</div>
-
-</div>
-</footer>
-
-
-<!-----------Footer End here------------------>
-
-
-
-
-<!--------Bootstrap JQ,JS link start here---------->
-<script type="text/javascript" src="JS/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!--Bootstrap Downloded link =<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
-
-<!----------IonIcon script link-->
-<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-
-
-
-</body>
-</html>
+  </section>
+  
+  
+  <!-----------Footer start here------------------>
+  <footer id="footer">
+  <div class="container-fluid" id="my-footer">
+  <div class="row" id="footer-wrap">
+    <div class="contactUs col-sm-3 col-md-4">
+      <img class="logo2" src="IMAGE/logo.png">
+      
+      <hr class="light">
+        <h5>Visit Us</h5>
+      <hr class="light">
+      <p>+880 1666 008 874</p>
+      <p>Al-Amin Complex(2nd Floor)</p>
+      <p>Zindabazar, Shylet-3100</p>
+      <p>kebabgardenbd@gmail.com</p>
+      <p>(Oposite of Bangladesh
+          Muktizuddah)</p>
+    </div>
+  <div class="col-sm-3 col-md-4">
+  <hr class="light">
+  <h5><a herf="footer.html#serviceArea"></a> Service Area</h5>
+  <hr class="light">
+  <p><a href="footer.html#rewardCard"></a>Reward Card</p>
+  <p><a href="footer.html#chooseUs"></a>Why Choose Us </p>
+  </div>
+  <div class="col-sm-3 col-md-4">
+      <hr class="light">
+      <h5><a href="footer.html#outPolicies"></a> Our Policies</h5>
+      <hr class="light">
+      <p><a href="footer.html#privacyPolicy"></a>Privacy Policy</p>
+      <p><a href="footer.html#termsConditions"></a>Terms & Conditions</p>
+      <p><a href="footer.html#coolie"></a>Cookie Policy</p>
+  </div>
+  <div class="col-12 clearfix " id="copyright">
+  <hr class="light-100">
+  <p id="copyright" style="box-sizing: border-box;">Copyright &#169; Kebab Garden , All Rights Reserved.<p>
+  <p>Design By Tania Hasan</p>
+  </div>
+  
+  </div>
+  
+  </div>
+  </footer>
+  
+  
+  <!-----------Footer End here------------------>
+  
+  
+  <!-------------------------My own javascript link------->
+  <!--<script type="text/javascript" src="JS/myapp.js"></script>--->
+  <script type="text/javascript" src="JS/app.js"></script>
+  
+  
+  
+  <!--------Bootstrap JQ,JS link start here---------->
+  <script type="text/javascript" src="JS/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!--Bootstrap Downloded link =<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+  
+  
+  
+  
+  
+  </body>
+  </html>
