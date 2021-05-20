@@ -140,7 +140,7 @@
 
    <!---------------Navbar start from bootstrap-->
 <nav class="my-nav navbar navbar-expand-lg sticky " data-spy="affix" data-offset-top="197">
-    <a class="navbar-brand text-white" href="#">
+    <a class="navbar-brand text-white" href="index.html">
       <img class="logo-rounded h-48" alt="Logo" src="IMAGE/logo.png" loading="lazy">Home
     </a>
       <button class="bg-primary navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -151,10 +151,10 @@
         <li class="nav-item active">
           <!--Add to cart and clear cart div start-->
           <div class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
-            <div class="row">
+            <div class="row clearfix">
                 <div class="col">
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button>
-                  <button class="clear-cart btn btn-danger">Clear Cart</button></div>
+                  <!-- <button class="clear-cart btn btn-danger">Clear Cart</button></div> -->
             </div>
           </div>
           <!--Add to cart and clear cart div start-->
@@ -279,6 +279,30 @@
 </div>
    
   <!-------------------------Main Contant end----------------->
+
+  <!-----------------------------------Modal-------------------->
+  <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="show-cart table">
+            
+          </table>
+          <div>Total price: BDT<span class="total-cart"></span></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary"><a href="index.html" style="color: darkred;"> Back To Menu</a></button>
+        </div>
+      </div>
+    </div>
+  </div> 
 
 
 
