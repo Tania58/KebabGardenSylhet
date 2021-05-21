@@ -30,10 +30,10 @@ $("#kidsCornerLink").click(function () {
     $(".PopupClass").hide("slow");
     $("#kidsCornerPopup").show("slow");
 });
-$("#BaltiLink").click(function () {
+$("#biriyaniCornerLink").click(function () {
     $(".MenuBlock").hide();
     $(".PopupClass").hide("slow");
-    $("#BaltiPopup").show("slow");
+    $("#biriyaniCornerPopup").show("slow");
 });
 $("#BiryaniLink").click(function () {
     $(".MenuBlock").hide();
