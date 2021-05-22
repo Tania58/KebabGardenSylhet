@@ -50,10 +50,10 @@ $("#snacksWrapsLink").click(function () {
     $(".PopupClass").hide("slow");
     $("#snacksWrapsPopup").show("slow");
 });
-$("#FusionLink").click(function () {
+$("#pizzaGardenLink").click(function () {
     $(".MenuBlock").hide();
     $(".PopupClass").hide("slow");
-    $("#FusionPopup").show("slow");
+    $("#pizzaGardenPopup").show("slow");
 });
 $("#VegLink").click(function () {
     $(".MenuBlock").hide();
