@@ -40,10 +40,15 @@ $("#BiryaniLink").click(function () {
     $(".PopupClass").hide("slow");
     $("#BiryaniPopup").show("slow");
 });
-$("#AgraLink").click(function () {
+$("#kebabGardenExtrasLink").click(function () {
+  $(".MenuBlock").hide();
+  $(".PopupClass").hide("slow");
+  $("#kebabGardenExtrasPopup").show("slow");
+});
+$("#snacksWrapsLink").click(function () {
     $(".MenuBlock").hide();
     $(".PopupClass").hide("slow");
-    $("#AgraPopup").show("slow");
+    $("#snacksWrapsPopup").show("slow");
 });
 $("#FusionLink").click(function () {
     $(".MenuBlock").hide();
