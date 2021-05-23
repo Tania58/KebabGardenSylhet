@@ -9,71 +9,78 @@ function darkMood() {
 
 
 //MENU OVERLAY FUNCTION START HERE
-
+//1
 $("#kebabGardenMainsLink").click(function () {
     $(".MenuBlock").hide();
     $(".PopupClass").hide("slow");
     $("#kebabGardenMainsPopup").show("slow");
 });
+//2
 $("#tandooriKaKhajanaLink").click(function () {
     $(".MenuBlock").hide();
     $(".PopupClass").hide("slow");
     $("#tandooriKaKhajanaPopup").show("slow");
 });
+//3
 $("#sizzlingTawaDishLink").click(function () {
     $(".MenuBlock").hide();
     $(".PopupClass").hide("slow");
     $("#sizzlingTawaDishPopup").show("slow");
 });
+//4
 $("#kidsCornerLink").click(function () {
     $(".MenuBlock").hide();
     $(".PopupClass").hide("slow");
     $("#kidsCornerPopup").show("slow");
 });
+//5
 $("#biriyaniCornerLink").click(function () {
     $(".MenuBlock").hide();
     $(".PopupClass").hide("slow");
     $("#biriyaniCornerPopup").show("slow");
 });
-$("#BiryaniLink").click(function () {
-    $(".MenuBlock").hide();
-    $(".PopupClass").hide("slow");
-    $("#BiryaniPopup").show("slow");
-});
+
+//6
 $("#kebabGardenExtrasLink").click(function () {
   $(".MenuBlock").hide();
   $(".PopupClass").hide("slow");
   $("#kebabGardenExtrasPopup").show("slow");
 });
+//7
 $("#snacksWrapsLink").click(function () {
     $(".MenuBlock").hide();
     $(".PopupClass").hide("slow");
     $("#snacksWrapsPopup").show("slow");
 });
+//8
 $("#pizzaGardenLink").click(function () {
     $(".MenuBlock").hide();
     $(".PopupClass").hide("slow");
     $("#pizzaGardenPopup").show("slow");
 });
-$("#VegLink").click(function () {
+//9
+$("#calzonePizzaLink").click(function () {
     $(".MenuBlock").hide();
     $(".PopupClass").hide("slow");
-    $("#VegPopup").show("slow");
+    $("#calzonePizzaPopup").show("slow");
 });
-$("#VegSidesLink").click(function () {
+//10
+$("#turkishPidePizzaLink").click(function () {
     $(".MenuBlock").hide();
     $(".PopupClass").hide("slow");
-    $("#VegSidesPopup").show("slow");
+    $("#turkishPidePizzaPopup").show("slow");
 });
-$("#RicesLink").click(function () {
+//11
+$("#garlicBreadPizzaLink").click(function () {
     $(".MenuBlock").hide();
     $(".PopupClass").hide("slow");
-    $("#RicesPopup").show("slow");
+    $("#garlicBreadPizzaPopup").show("slow");
 });
-$("#SetMealsLink").click(function () {
+//12
+$("#drinksLink").click(function () {
     $(".MenuBlock").hide();
     $(".PopupClass").hide("slow");
-    $("#SetMealsPopup").show("slow");
+    $("#drinksPopup").show("slow");
 });
 $("#BreadLink").click(function () {
     $(".MenuBlock").hide();
